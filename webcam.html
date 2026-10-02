@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="it" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Webcam e Meteo — Scuola Svizzera di Sci San Bernardino</title>
+  <meta name="description" content="Webcam live di San Bernardino, archivio orario, meteo, stato piste e bollettino valanghe.">
+  <meta name="theme-color" content="#d52b1e">
+  <link rel="icon" href="assets/img/logo/badge-swiss-ski-school.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="webcam">
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="page-hero page-hero--blue">
+      <canvas class="hero__snow" data-snow="90" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;z-index:-1"></canvas>
+      <svg class="page-hero__cross" viewBox="0 0 32 32" aria-hidden="true"><path fill="#fff" d="M13 6h6v7h7v6h-7v7h-6v-7H6v-6h7z"/></svg>
+      <div class="wrap">
+        <nav class="breadcrumb" aria-label="Percorso"><a href="index.html">Home</a> / <span>Webcam / Meteo</span></nav>
+        <h1 data-reveal>Webcam / Meteo</h1>
+        <p data-reveal style="--d:.1s">Guarda in diretta le condizioni a San Bernardino, scorri l'archivio orario e controlla meteo e bollettino valanghe prima di uscire.</p>
+      </div>
+      <div class="slope" aria-hidden="true"><svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path fill="#f6f8fc" d="M0 80V40c240 30 480 30 720 0s480-30 720 0v40z"/></svg></div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="wrap">
+        <div class="split split--wide" style="align-items:start">
+          <div data-reveal="left">
+            <div class="webcam">
+              <img src="https://www.scisanbernardino.ch/webcam/sanbernardino.jpg" alt="Webcam San Bernardino">
+              <span class="webcam__live" data-webcam-label>Live</span>
+            </div>
+            <div class="hours" data-webcam aria-label="Archivio orario webcam"></div>
+            <p class="small muted mt-1">L'immagine live si aggiorna automaticamente ogni 5 minuti. Clicca su un orario per vedere l'archivio della giornata (06:00 – 21:00).</p>
+          </div>
+          <div data-reveal="right">
+            <div class="weather" data-weather data-forecast="#forecast"><div class="weather__place">San Bernardino · 1626 m</div><div class="weather__icon">⏳</div><div class="weather__temp">…</div><div class="weather__desc">Caricamento meteo</div></div>
+            <div class="forecast" id="forecast" style="grid-template-columns:repeat(5,1fr)"></div>
+            <div class="doc-list mt-2">
+              <a class="doc" href="https://www.slf.ch/avalanche/bulletin/it/gk_c_it_dst_1_3.pdf" target="_blank" rel="noopener">
+                <span class="doc__icon">SLF</span>
+                <span class="doc__text"><b>Bollettino valanghe</b><span>Istituto per lo studio della neve e delle valanghe</span></span>
+                <span class="doc__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+              </a>
+              <a class="doc" href="https://www.meteocentrale.ch/it/europa/svizzera/meteo-s-bernardino/details/M11-000736/" target="_blank" rel="noopener">
+                <span class="doc__icon" style="--c:var(--blue)">☁</span>
+                <span class="doc__text"><b>Meteocentrale</b><span>Previsioni dettagliate S. Bernardino</span></span>
+                <span class="doc__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--white">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <span class="kicker">Stato impianti</span>
+          <h2>Piste e <span class="hl">impianti aperti</span></h2>
+          <p>Situazione aggiornata di piste e impianti di risalita di San Bernardino.</p>
+        </div>
+        <div class="embed" data-reveal>
+          <iframe src="https://sdds4.intermaps.com/sanbernardino/sanbernardino.aspx" height="760" loading="lazy" title="Stato piste e impianti San Bernardino"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+# Immagini originali ad alta risoluzione (solo archivio locale)
+_originali/
+.claude/
+.DS_Store
+.Rhistory

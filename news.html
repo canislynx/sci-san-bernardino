@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="it" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>News — Scuola Svizzera di Sci San Bernardino</title>
+  <meta name="description" content="Bacheca news della Scuola Svizzera di Sci e Snowboard San Bernardino: corsi, eventi, gare e programma della stagione.">
+  <meta name="theme-color" content="#d52b1e">
+  <link rel="icon" href="assets/img/logo/badge-swiss-ski-school.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="news">
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="page-hero">
+      <svg class="page-hero__cross" viewBox="0 0 32 32" aria-hidden="true"><path fill="#fff" d="M13 6h6v7h7v6h-7v7h-6v-7H6v-6h7z"/></svg>
+      <div class="wrap">
+        <nav class="breadcrumb" aria-label="Percorso"><a href="index.html">Home</a> / <span>News</span></nav>
+        <h1 data-reveal>Bacheca news</h1>
+        <p data-reveal style="--d:.1s">Programmi, eventi, corsi e gare. Clicca su un volantino per ingrandirlo e scorrere tra tutte le news.</p>
+      </div>
+      <div class="slope" aria-hidden="true"><svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path fill="#f6f8fc" d="M0 80V40c240 30 480 30 720 0s480-30 720 0v40z"/></svg></div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="wrap">
+        <div class="filters" data-filters="#news-all" role="toolbar" aria-label="Filtra news">
+          <button class="chip is-active" data-filter="all">Tutte</button>
+          <button class="chip" data-filter="stagione">Stagione 25/26</button>
+          <button class="chip" data-filter="corsi">Corsi</button>
+          <button class="chip" data-filter="eventi">Eventi</button>
+          <button class="chip" data-filter="gare">Gare</button>
+          <button class="chip" data-filter="maestri">Maestri</button>
+          <button class="chip" data-filter="archivio">Archivio</button>
+        </div>
+        <div class="news-grid" id="news-all" data-news="all"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
